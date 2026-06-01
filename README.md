@@ -38,10 +38,11 @@ flowchart TD
 ## Dataset: FaceForensics++ (FF-C23)
 
 This pipeline is built and evaluated on the benchmark **FaceForensics++ (C23 compression)** dataset:
-- **Original Videos**: Pristine, unaltered human face videos.
-- **Deepfake Videos**: Manipulated faces generated using computer vision deepfake pipelines.
-- **Frame Extraction**: The system extracts a subset of 10 evenly spaced frames per video using `cv2.VideoCapture` to form the image dataset.
-- **Preprocessing**: Input images are resized to `224x224` pixels, converted to tensors, and normalized according to ImageNet statistics.
+- **Original Videos**: Pristine, unaltered human face videos (1,000 total).
+- **Deepfake Videos**: Manipulated faces generated using computer vision pipelines (1,000 total).
+- **Subsampling & Scale:** Due to local hardware and training time limits, a random subset of **100 real videos** and **100 fake videos** was sampled.
+- **Frame Extraction:** The system extracts a subset of 10 evenly spaced frames per video using `cv2.VideoCapture` from this subset, creating a highly targeted dataset of **2,000 total frames** (1,000 real, 1,000 fake).
+- **Preprocessing:** Input images are resized to `224x224` pixels, converted to tensors, and normalized according to ImageNet statistics.
 
 ---
 
