@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook and IPython
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# OS metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project-specific Data & Cache (Ignore dataset/output directories)
+data/
+output/
+frames/
+deepfake_frames/
+test_frames/
+gradcam_examples/
+
+# Ignore local output media/datasets so they don't bloat Git
+*.mp4
+*.avi
+*.jpg
+*.jpeg
+*.png
+*.csv
+*.pt
+*.pth
+
+# Exception: allow files in assets folder (if you save figures for README there)
+!assets/*.png
+!assets/*.jpg
+!assets/*.jpeg
