@@ -4,7 +4,7 @@ An end-to-end deep learning pipeline for detecting deepfake videos using **Convo
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 With the rapid advancement of generative AI, deepfakes have become increasingly sophisticated, making automated detection crucial. This project implements and compares two state-of-the-art architectures for deepfake image classification:
 1. **EfficientNet-B0**: A computationally efficient CNN that excels at capturing local spatial textures and facial artifacts.
@@ -14,7 +14,7 @@ To ensure the models are trustworthy, **Grad-CAM (Gradient-weighted Class Activa
 
 ---
 
-## ⚙️ Pipeline Architecture
+## Pipeline Architecture
 
 The complete system pipeline is illustrated in the diagram below:
 
@@ -35,7 +35,7 @@ flowchart TD
 
 ---
 
-## 📊 Dataset: FaceForensics++ (FF-C23)
+## Dataset: FaceForensics++ (FF-C23)
 
 This pipeline is built and evaluated on the benchmark **FaceForensics++ (C23 compression)** dataset:
 - **Original Videos**: Pristine, unaltered human face videos.
@@ -45,7 +45,7 @@ This pipeline is built and evaluated on the benchmark **FaceForensics++ (C23 com
 
 ---
 
-## 🧠 Models Implemented
+## Models Implemented
 
 ### 1. CNN: EfficientNet-B0
 - Uses **EfficientNet-B0** pre-trained on ImageNet.
@@ -59,7 +59,7 @@ This pipeline is built and evaluated on the benchmark **FaceForensics++ (C23 com
 
 ---
 
-## 🔍 Explainable AI (XAI) with Grad-CAM
+## Explainable AI (XAI) with Grad-CAM
 
 To avoid a "black-box" model, we use **Grad-CAM** on the final convolutional layer of EfficientNet. Grad-CAM calculates the gradients of the score for the target class with respect to the feature map activations, producing a heatmap that is overlaid on the original image:
 - Shows if the model is focusing on natural indicators (like the eyes and mouth) or deepfake artifacts (like blending boundaries around the jawline or unnatural textures on the nose).
@@ -67,7 +67,7 @@ To avoid a "black-box" model, we use **Grad-CAM** on the final convolutional lay
 
 ---
 
-## 📈 Evaluation & Results
+## Evaluation & Results
 
 The pipeline generates the following deliverables upon execution:
 - **Classification Reports**: Precision, recall, and F1-score for both classes.
@@ -76,7 +76,7 @@ The pipeline generates the following deliverables upon execution:
 
 ---
 
-## 🚀 Setup & Local Installation
+## Setup & Local Installation
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -113,7 +113,7 @@ jupyter notebook deepfake.ipynb
 
 ---
 
-## 📤 How to Upload this Project to GitHub
+## How to Upload this Project to GitHub
 
 Follow these simple command-line steps to push this project to your GitHub account:
 
